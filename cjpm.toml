@@ -1,0 +1,14 @@
+[dependencies]
+
+[package]
+  cjc-version = "0.55.3"
+  compile-option = ""
+  description = "Snowflake algorithm for Cangjie"
+  link-option = ""
+  name = "snowflake4cj"
+  output-type = "dynamic"
+  override-compile-option = ""
+  src-dir = ""
+  target-dir = ""
+  version = "1.0.0"
+  package-configuration = {}
