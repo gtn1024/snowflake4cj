@@ -3,7 +3,7 @@
   <p>Snowflake algorithm for Cangjie</p>
 </div>
 <p align="center">
-  <img alt="" src="https://img.shields.io/badge/release-v1.0.0-brightgreen" style="display: inline-block;" />
+  <img alt="" src="https://img.shields.io/badge/release-v1.0.1-brightgreen" style="display: inline-block;" />
   <img alt="" src="https://img.shields.io/badge/cjc-v0.55.3-brightgreen" style="display: inline-block;" />
 </p>
 
@@ -17,7 +17,7 @@ snowflake4cj is a snowflake algorithm implementation based on Cangjie.
 
 ```toml
 # In the `dependencies` section of `cjpm.toml`
-snowflake4cj = { git = "https://github.com/gtn1024/snowflake4cj.git", tag = "v1.0.0" }
+snowflake4cj = { git = "https://github.com/gtn1024/snowflake4cj.git", tag = "v1.0.1" }
 ```
 
 ## 使用 / Usage
