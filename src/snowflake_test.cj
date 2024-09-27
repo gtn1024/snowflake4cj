@@ -2,6 +2,8 @@ package snowflake4cj
 
 import std.unittest.*
 import std.unittest.testmacro.*
+import std.collection.*
+import std.sync.*
 
 @Test
 func testSnowflake() {
@@ -29,4 +31,38 @@ func testFailedWhenMachineIdIsInvalid() {
             }
         }
     }
+}
+
+@Test
+func testSynchronized() {
+    let snowflake = Snowflake(0, 0)
+    let threads = 50
+    let count = 10000
+
+    let mtx = ReentrantMutex()
+    let list = ArrayList<Int64>()
+
+    let sc = SyncCounter(threads)
+
+    for (_ in 0..threads) {
+        spawn {
+            for (_ in 0..count) {
+                synchronized (mtx) {
+                    list.append(snowflake.nextId())
+                }
+            }
+            sc.dec()
+        }
+    }
+
+    sc.waitUntilZero()
+
+    @Expect(threads * count, list.size)
+
+    for (i in 1..list.size) {
+        @Expect(list[i - 1] < list[i])
+    }
+
+    let set = HashSet<Int64>(list)
+    @Expect(threads * count, set.size)
 }
