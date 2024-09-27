@@ -10,6 +10,7 @@ func testSnowflake() {
     for (i in 0..10000) {
         let new = snowflake.nextId()
         @Expect(new > last)
+        last = new
     }
 }
 
