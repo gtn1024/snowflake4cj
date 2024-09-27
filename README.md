@@ -5,6 +5,7 @@
 <p align="center">
   <img alt="" src="https://img.shields.io/badge/release-v1.0.1-brightgreen" style="display: inline-block;" />
   <img alt="" src="https://img.shields.io/badge/cjc-v0.55.3-brightgreen" style="display: inline-block;" />
+  <img alt="" src="https://github.com/gtn1024/snowflake4cj/actions/workflows/ci.yml/badge.svg" style="display: inline-block;" />
 </p>
 
 ## 介绍 / Introduction
