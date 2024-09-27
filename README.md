@@ -24,7 +24,7 @@ snowflake4cj = { git = "https://github.com/gtn1024/snowflake4cj.git", tag = "v1.
 ## 使用 / Usage
 
 ```cj
-import snowflake4cj.snowflake.Snowflake
+import snowflake4cj.Snowflake
 
 main(): Int64 {
     let snowflake = Snowflake(0, 0)

@@ -1,4 +1,4 @@
-package snowflake4cj.snowflake
+package snowflake4cj
 
 import std.unittest.*
 import std.unittest.testmacro.*
